@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+
+{% block body %}
+
+	<div class="form-container">
+		<form action="{{ url_for('contact') }}" method="post" novalidate>
+			<ul class="list">
+				<li><h3>Get In Touch</h3></li>
+				<li><input type="text" name="name" placeholder="Enter Your Name"></li>
+				<li><input type="text" name="number" placeholder="Enter Mobile Number"></li>
+				<li><textarea name="message" placeholder="Enter Your Messeage"></textarea></li>
+				<li><input type="Submit" name="Submit" value="Submit"></li>
+			</ul>
+		</form>
+	</div>
+{% endblock %}

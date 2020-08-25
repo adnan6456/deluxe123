@@ -1,0 +1,74 @@
+{% extends "layout.html"%}
+
+{% block body %}
+<style type="text/css">
+	
+.Form-container {
+	width: 250px;
+	height: auto;
+	margin-top: 10%;
+	padding: 40px 30px ;
+	background-color: white ;
+	border-radius: 10px ;
+	box-shadow: 0 0 10px 0 black ;
+	position: relative;
+	margin-left: 40%;
+	margin-bottom: 10%;
+}
+.user-img {
+	background:url("static/css/images/final.png") no-repeat;
+	width: 80px;
+	height: 80px;
+	background-size: 100%;
+	position: absolute;
+	top: -55px;
+	left: 120px;
+}
+ul.list {
+	list-style: none;
+	text-align: center;
+	font-size: x-large;
+	margin-left: -13%;
+
+}
+ul.list li{
+	width: 250px;
+	margin-bottom: 16px;
+}
+ul .list li h3 {
+	width: 300px;
+	float: left;
+}
+ul.list li input {
+	width: 250px;
+	text-align: center;
+	padding: 10px 1px;
+	border: none;
+	background-color: #d3d3d3 ;
+	border-radius: 5px;
+}
+ul.list li input[type="button"]{
+	background-color: #4690fb;
+	color: white ;
+}
+
+ul.list li:nth-child(5) {
+	color: red;
+}
+
+
+</style>
+	<div class="Form-container">
+		<div class="user-img"></div>
+		<form action=" {{ url_for('login') }}" method="post">
+			<ul class="list">
+				<li><h2>User Login</h2></li>
+				<li><input type="text" name="Username" placeholder=" Username"></li>
+				<li><input type="password" name="Password" placeholder="..........."></li>
+				<li><input type="button" name="Log In" value="Log In"></li>
+				<li>Forget Password?</li>
+			</ul>
+		</form>
+	</div>
+			
+	{% endblock %}
